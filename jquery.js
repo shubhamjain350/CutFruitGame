@@ -5,22 +5,7 @@ var step;
 var action;
 var fruits = ['apple', 'banana', 'cherries', 'grapes',
 'mango', 'orange', 'peach', 'pear', 'watermelon'];
-$(function(){
-	$("#startreset").click(function(){
- 		if(playing == true){
- 			location.reload();
- 		}else{
- 			playing = true;
- 			score = 0;
- 			$("#scorevalue").html(score);
- 			$("#trialsLeft").show();
- 			trialsLeft = 3;
- 			addHearts();
- 			$("#gameOver").hide();
- 			$("#startreset").html("Reset Game");
- 			startAction();
- 		}
-	});
+
 
 	$("#fruit1").mouseover(function(){
  	score++;
@@ -71,6 +56,23 @@ $(function(){
 	 			}
 	 		}
 	 	}, 10);
+		
+		$(function(){
+	$("#startreset").click(function(){
+ 		if(playing == true){
+ 			location.reload();
+ 		}else{
+ 			playing = true;
+ 			score = 0;
+ 			$("#scorevalue").html(score);
+ 			$("#trialsLeft").show();
+ 			trialsLeft = 3;
+ 			addHearts();
+ 			$("#gameOver").hide();
+ 			$("#startreset").html("Reset Game");
+ 			startAction();
+ 		}
+	});
 	}
 
 	function chooseFruit(){
